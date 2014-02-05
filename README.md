@@ -16,3 +16,35 @@ http://www.peercointalk.org/index.php?topic=2196.0
 What stops me from POS minting several different chains at once?
 ================================================================
 http://www.peercointalk.org/index.php?topic=1956.0
+
+
+Can we have paper wallet PoS?
+=============================
+
+TL;DR: Yes but we must change the protocol.
+
+I think Sunny King is already planning a solution but I don't know if he mentioned how or when.
+
+For the network to be secure, you need to prove you own aged coins to generate a PoS block (otherwise anyone could easily destroy the network by generating as many blocks as they want). Right now the only way to prove that you own them is by signing a transaction with the private key of your coins.
+
+But the bitcoin system is very flexible so we can quite easily change the protocol to allow special transaction (that was done to allow multisig for example).
+
+Most of the transactions are simple "pay to address". That means they have a script attached that says "you can do whatever you want with these coins if you can sign with the private key of address X."
+On multisig transactions, the script says (for example) "you can do whatever you want if you can sign with 2 private keys of addresses X, Y and Z."
+
+In our case we could allow transactions with a script that says "you can generate a PoS block if you can sign with the private key of address X, and whatever you want if you can sign with the private key of address Y."
+This way you could have a private key that can only be used as PoS. You could keep it unlocked without too much risk.
+
+We would have to force the output to be the same as the input in this PoS block (which is not the case right now: you can change your client to make it move your coin when it finds a PoS block).
+
+I don't know if there already are such transactions in bitcoin where a signature is only valid in a specific context. I think it should work. It'd probably require a new script "word" (something like "are we doing PoS?").
+
+It would also help on the issue mentioned above where you don't know which coins are really used for minting.
+
+Building a good user interface for that may take some time.
+
+I think that's one possible solution. There are certainly others.
+
+Anyway I think we can't implement a solution only on the client side because when you received your coin it was explicitly said that only your private key can use them and the protocol obeys that even during PoS. We need to change the protocol (i.e. all clients).
+
+http://www.peercointalk.org/index.php?topic=2196.0
