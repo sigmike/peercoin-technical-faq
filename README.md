@@ -53,15 +53,28 @@ http://www.peercointalk.org/index.php?topic=2196.0
 Grinding attack
 ===============
 
-<guest2324q> Hi sigmike. The bitcoin wiki have been updated. Yesterday Peercoin was pointed out as not having a decentralized solution for the stake-grinding issue: https://en.bitcoin.it/w/index.php?title=Altcoin&action=historysubmit&diff=48013&oldid=47950
-<guest2324q> would you disagree?
-<guest2324q> search this document for grind http://download.wpsoftware.net/bitcoin/pos.pdf
-<sigmike> hi
-<sigmike> this grinding attack doesn't work on peercoin because the block hash is not used in the proof of stake process
-<sigmike> so you can't try many block hash to find one that make you find the next block
-<sigmike> it's true that there are centralized checkpoints though
-<sigmike> but they will probably be removed (or made disabled by default) in the next version
-<sigmike> so conclusion in this text is misleading
-<sigmike> the centralized checkpoints exist, but not because of grinding attacks
-<sigmike> they exist partially because of the nothing at stake problem described above
-<sigmike> and they will be removed probably because the cost is becoming too high as more people mint
+guest2324q:
+
+The bitcoin wiki have been updated. Yesterday Peercoin was pointed out as not having a decentralized solution for the stake-grinding issue: https://en.bitcoin.it/w/index.php?title=Altcoin&action=historysubmit&diff=48013&oldid=47950
+
+would you disagree?
+
+search this document for grind http://download.wpsoftware.net/bitcoin/pos.pdf
+
+sigmike:
+
+this grinding attack doesn't work on peercoin because the block hash is not used in the proof of stake process
+
+so you can't try many block hash to find one that make you find the next block
+
+it's true that there are centralized checkpoints though
+
+but they will probably be removed (or made disabled by default) in the next version
+
+so conclusion in this text is misleading
+
+the centralized checkpoints exist, but not because of grinding attacks
+
+they exist partially because of the nothing at stake problem described above
+
+and they will be removed probably because the cost is becoming too high as more people mint
